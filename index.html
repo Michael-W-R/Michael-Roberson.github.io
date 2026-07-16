@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terran Roberson - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body class="video-bg">
 
+  <video class="bg-video" autoplay muted loop playsinline poster="Portfolio%20Background%20w%20Gradient.jpg">
+    <source src="Screen_Recording_20260716_162015_Gallery.mp4" type="video/mp4">
+  </video>
+  <div class="bg-overlay"></div>
+
+  <header>
+    <nav>
+      <a href="index.html" style="font-weight: bold; color: #90e0ef;">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="organizations.html">Organizations</a>
+      <a href="contact.html">Contact</a>
+      <a href="hobbies.html">Hobbies</a>
+    </nav>
+  </header>
+  <!-- rest of your page stays exactly the same -->
+  <!--
+<body style="background-image: url('https://github.com/Terran-M-R/Terran-Roberson.github.io/blob/main/Portfolio%20Background%20w%20Gradient.jpg?raw=true'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+  
+  <header>
+    <nav>
+      <a href="index.html" style="font-weight: bold; color: #90e0ef;">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="organizations.html">Organizations</a>
+      <a href="contact.html">Contact</a>
+      <a href="hobbies.html">Hobbies</a>
+    </nav>
+  </header> This is the old background image that's just a picture rather than video. If the vid does not work, replace it with this -->
+  <!-- Title page and funfacts section, there are some animations for the page on the CCS-->
+
+  <section class="websitetitle">
+    <h1 class="fade-in-up">TERRAN ROBERSON</h1>
+    <p class="fade-in-up delay-1">Aspiring Management Information Systems Professional</p>
+    <div class="connect-button-container fade-in-up delay-2">
+    <a href="contact.html" class="connect-button">Let's Connect</a>
+    </div>
+  </section>
+
+  <section class="fun-facts-section">
+  <div class="fun-facts-container fade-in-up delay-3">
+    <h3 class="fun-facts-title">Fun Facts</h3>
+    <div class="fun-facts-carousel">
+      <div class="fun-fact-card active">
+        <p>I recently participated in the 2026 Goldman Sachs Possibilities Series where I networked with professionals from the firm and learned career advice</p>
+      </div>
+      <div class="fun-fact-card active">
+        <p>I'm currently developing an application in the IBM Global AI Builders Challenge - Reimagine Creative Industries with AI</p>
+      </div>
+      <div class="fun-fact-card">
+        <p>I've just transferred into the McCombs School of Business at the University of Texas at Austin after a year at UT San Antonio</p>
+      </div>
+      <div class="fun-fact-card">
+        <p>My favorite genre is science fiction which has led me to start creating a sci-fi novel of my own</p>
+      </div>
+       <div class="fun-fact-card">
+        <p>I've enhanced my skills in adaptability and resilience after moving seven times across the U.S. and Germany as part of being an Army brat</p>
+      </div>
+      <div class="fun-fact-card">
+        <p>Some of my hobbies are writing, running, gaming, and creating personal projects</p>
+      </div>
+    </div>
+    <div class="carousel-dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+      <span class="dot" data-index="5"></span>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2026 TERRAN ROBERSON</p>
+  </footer>
+
+  <!-- This is JavaScript for the fun facts page the <script> is is script for JavaScript code, I didn't make another page for a .js file, 
+  it's just imbedded here -->
+  <script>
+  // Fun Facts Carousel
+  const cards = document.querySelectorAll('.fun-fact-card');
+  const dots = document.querySelectorAll('.dot');
+  let currentIndex = 0;
+  
+  function showCard(index) {
+    // Remove active class from all cards and dots
+    cards.forEach(card => {
+      card.classList.remove('active', 'exit-left');
+    });
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Add exit animation to current card
+    if (cards[currentIndex]) {
+      cards[currentIndex].classList.add('exit-left');
+    }
+    
+    // Update index
+    currentIndex = index;
+    
+    // Show new card and activate dot
+    cards[currentIndex].classList.add('active');
+    dots[currentIndex].classList.add('active');
+  }
+  
+  function nextCard() {
+    const nextIndex = (currentIndex + 1) % cards.length;
+    showCard(nextIndex);
+  }
+  
+  // Auto-rotate every 4 seconds
+  setInterval(nextCard, 4000);
+  
+  // Allow manual clicking on dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showCard(index);
+    });
+  });
+</script>
+</body>
+</html>
