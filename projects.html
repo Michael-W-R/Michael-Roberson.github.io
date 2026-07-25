@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Michael Roberson</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html" class="active" style="color:#90e0ef;">Projects</a>
+      <a href="organizations.html">Organizations</a>
+      <a href="contact.html">Contact</a>
+      <a href="hobbies.html">Hobbies</a>
+    </nav>
+  </header>
+
+  <section class="projects-section">
+    <div class="projects-container">
+      <h1 class="projects-title">Projects</h1>
+      <p class="organizations-intro">
+        Tools and products I've designed and built — from a live public web app
+        to Army readiness and evaluation systems. Each one turns a real
+        operational problem into a working solution.
+      </p>
+
+      <div class="projects-grid">
+
+        <!-- PCS Scout -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>PCS Scout</h3>
+            <span class="project-date">Flagship · Live</span>
+          </div>
+          <p class="project-description">
+            A public web app I designed and built end-to-end to help Soldiers and
+            Families find housing during a PCS move. It pulls official DoD BAH
+            rates, models rush-hour commute times, maps "fair-commute" zones
+            between two workplaces, estimates VA-loan home affordability, and
+            surfaces nearby schools — then hands off to listing sites pre-filtered
+            to the user's budget. No account, no ads, no tracking.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">MapLibre GL</span>
+            <span class="tech-tag">TomTom Traffic API</span>
+            <span class="tech-tag">GitHub Actions</span>
+            <span class="tech-tag">HTML / CSS</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://pcsscout.com" target="_blank" rel="noopener">Live Site ↗</a>
+            <a class="project-link" href="https://github.com/Michael-W-R/pcs-housing-finder" target="_blank" rel="noopener">Source Code ↗</a>
+          </div>
+        </div>
+
+        <!-- Senior Rater Profile Manager -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Senior Rater Profile Manager</h3>
+            <span class="project-date">Power BI</span>
+          </div>
+          <p class="project-description">
+            A decision-support tool that encodes AR 623-3 / DA PAM 623-3
+            evaluation-profile rules and lets senior raters model planned ratings
+            before they misfire a profile. It reconciles evaluation-system
+            exports, expresses the regulation as a DAX rule set, and runs a
+            sequenced "would process as" check that flags misfires before
+            submission.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Power BI</span>
+            <span class="tech-tag">DAX</span>
+            <span class="tech-tag">Power Query</span>
+            <span class="tech-tag">Data Modeling</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/Michael-W-R/Portfolio/blob/main/Army-Projects/Senior-Rater-Profile-Manager.md" target="_blank" rel="noopener">Case Study ↗</a>
+          </div>
+        </div>
+
+        <!-- Strength Management Tool -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Strength Management Tool</h3>
+            <span class="project-date">Power BI</span>
+          </div>
+          <p class="project-description">
+            A snapshot star-schema dashboard suite that consolidates multiple
+            personnel-system exports into authorized-vs-assigned strength,
+            projected gains and losses, and a forward force-projection glide
+            path — the inputs that drive readiness reporting. Built on sound
+            data-warehouse principles with resilient Power Query pipelines.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Power BI</span>
+            <span class="tech-tag">Star Schema</span>
+            <span class="tech-tag">Power Query</span>
+            <span class="tech-tag">DAX</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/Michael-W-R/Portfolio/blob/main/Army-Projects/Strength-Management-Tool.md" target="_blank" rel="noopener">Case Study ↗</a>
+          </div>
+        </div>
+
+        <!-- Rating Chain App -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Rating Chain App</h3>
+            <span class="project-date">HR Modernization</span>
+          </div>
+          <p class="project-description">
+            A Soldier-facing tool that simplifies building, validating, and
+            managing rating chains during standard operations and organizational
+            transitions — with guided workflows and automated checks against
+            AR 623-3 and DA PAM 623-3.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Power Apps</span>
+            <span class="tech-tag">UI / UX</span>
+            <span class="tech-tag">Workflow Design</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/Michael-W-R/Portfolio/blob/main/Army-Projects/Rating-Chain-App.md" target="_blank" rel="noopener">Case Study ↗</a>
+          </div>
+        </div>
+
+        <!-- Evaluation Automation Tools -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Evaluation Automation Tools</h3>
+            <span class="project-date">HR Modernization</span>
+          </div>
+          <p class="project-description">
+            Automation across the evaluation process — routing logic by rank,
+            component, and duty status; suspense-tracking dashboards; and
+            error-checking against AR 623-3 — built to cut administrative
+            workload and improve accuracy for HR staff and commanders.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Power Apps</span>
+            <span class="tech-tag">Power BI</span>
+            <span class="tech-tag">SharePoint</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/Michael-W-R/Portfolio/blob/main/Army-Projects/Evaluation-Automation.md" target="_blank" rel="noopener">Case Study ↗</a>
+          </div>
+        </div>
+
+        <!-- Workflow Optimization -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Workflow Optimization &amp; Data Integration</h3>
+            <span class="project-date">HR Modernization</span>
+          </div>
+          <p class="project-description">
+            HR-process modernization through integrated data pipelines and
+            automated workflows that consolidate data from multiple sources into
+            clean, actionable dashboards for leaders — reducing manual workload
+            and speeding decisions.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Power BI</span>
+            <span class="tech-tag">Power Query</span>
+            <span class="tech-tag">Power Apps</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/Michael-W-R/Portfolio/blob/main/Army-Projects/WorkFlow-Optimization.md" target="_blank" rel="noopener">Case Study ↗</a>
+          </div>
+        </div>
+
+        <!-- Peer Evaluation Tool -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Peer Evaluation Tool</h3>
+            <span class="project-date">Leader Development</span>
+          </div>
+          <p class="project-description">
+            A lightweight, mobile-friendly platform for structured, anonymous
+            peer feedback during leader-development sessions — with configurable
+            categories, automatic aggregation, and clean leader-facing summaries
+            that highlight strengths and development areas.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">UI / UX</span>
+            <span class="tech-tag">Front-End</span>
+            <span class="tech-tag">Data Aggregation</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/Michael-W-R/Portfolio/blob/main/Army-Projects/Peer-Evaluation-Tool.md" target="_blank" rel="noopener">Case Study ↗</a>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="organizations-intro" style="margin-top:20px;">
+        More detail on every project lives in my
+        <a class="org-link" href="https://github.com/Michael-W-R/Portfolio" target="_blank" rel="noopener" style="display:inline-block;">Portfolio repository ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 MICHAEL ROBERSON</p>
+  </footer>
+</body>
+</html>
