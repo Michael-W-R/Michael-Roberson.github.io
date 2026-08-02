@@ -902,6 +902,31 @@ section {
   color: #C8102E;
 }
 
+/* Command and General Staff College — featured degree card, centered above
+   the UT/UH grid. Gold accent (#D4AF37) drawn from the crest's eagle/banners. */
+.org-featured {
+  max-width: 560px;
+  margin: 0 auto 30px auto;
+}
+
+.cgsc-card {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.cgsc-card:hover {
+  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+.cgsc-card .org-logo-placeholder {
+  background-color: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.cgsc-card .org-name {
+  color: #D4AF37;
+}
+
 .org-role {
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
