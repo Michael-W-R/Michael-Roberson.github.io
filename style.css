@@ -877,6 +877,27 @@ section {
   text-align: center;
 }
 
+/* University of Houston card — override the default burnt-orange org styles
+   with UH Cougar Red (#C8102E) so the UH card carries its own branding.
+   Scoped to .uh-card, so the UT card stays burnt orange. */
+.uh-card {
+  border-color: rgba(200, 16, 46, 0.5);
+}
+
+.uh-card:hover {
+  border-color: rgba(200, 16, 46, 0.7);
+  box-shadow: 0 8px 20px rgba(200, 16, 46, 0.25);
+}
+
+.uh-card .org-logo-placeholder {
+  background-color: rgba(200, 16, 46, 0.1);
+  border-color: rgba(200, 16, 46, 0.4);
+}
+
+.uh-card .org-name {
+  color: #C8102E;
+}
+
 .org-role {
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
