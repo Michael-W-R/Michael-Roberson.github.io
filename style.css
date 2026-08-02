@@ -898,6 +898,10 @@ section {
   color: #C8102E;
 }
 
+.uh-card .org-activities h4 {
+  color: #C8102E;
+}
+
 .org-role {
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
