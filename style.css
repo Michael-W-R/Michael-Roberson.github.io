@@ -56,8 +56,11 @@ homepagebody {
 /* These are the settings for the background of the other HTMLs, not the homepage. If I want a background for the rest of the pages, I need to add
 background-image: url(''); */
 
+/* Sticky-footer setup: body is a full-height flex column and footer uses
+   margin-top:auto to pin to the bottom. Note: do NOT put height:100% on body
+   here — a fixed height makes the flex column shrink tall page content out
+   past the footer (footer ends up mid-page). min-height:100vh below is enough. */
 html, body {
-  height: 100%;
   margin: 0;
 }
 
@@ -67,8 +70,6 @@ body {
   min-height: 100vh;
   font-family: Verdana, sans-serif;
   background-color: #0a0a0a;
-  background-image: 
-    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(144, 224, 239, 0.03) 35px, rgba(144, 224, 239, 0.03) 70px);
   color: #ffffff;
   overflow-x: hidden;
   animation: pageFadeIn 0.4s ease-in;
@@ -97,14 +98,12 @@ body {
 .websitetitle h1 {
   font-size: 4rem;
   margin-bottom: 5px;
-  transform: translateX(400px);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 .websitetitle p {
   font-size: 1.5rem;
-  transform: translateX(400px);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
@@ -147,11 +146,11 @@ the buttons move down 3 pixels and darken to let userers know they are clicking 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateX(300px) translateY(30px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: translateX(300px) translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -193,10 +192,10 @@ the buttons move down 3 pixels and darken to let userers know they are clicking 
 
 .social-links a:hover {
   transform: translateY(-5px) scale(1.05);
-  background-color: rgba(144, 224, 239, 0.2);
+  background-color: rgba(191, 87, 0, 0.2);
   color: #bf5700;
-  border-color: rgba(144, 224, 239, 0.5);
-  box-shadow: 0 8px 20px rgba(144, 224, 239, 0.3);
+  border-color: rgba(191, 87, 0, 0.5);
+  box-shadow: 0 8px 20px rgba(191, 87, 0, 0.3);
 }
 
 .social-links a:hover .social-icon {
@@ -213,7 +212,7 @@ the buttons move down 3 pixels and darken to let userers know they are clicking 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   50% {
-    text-shadow: 2px 2px 20px rgba(144, 224, 239, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 20px rgba(191, 87, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -284,10 +283,10 @@ header {
 
 .connect-button:hover {
   transform: translateY(-5px) scale(1.05);
-  background-color: rgba(144, 224, 239, 0.3);
+  background-color: rgba(191, 87, 0, 0.3);
   color: #bf5700;
   border-color: #bf5700;
-  box-shadow: 0 8px 20px rgba(144, 224, 239, 0.4);
+  box-shadow: 0 8px 20px rgba(191, 87, 0, 0.4);
 }
 
 /* fun facts section on the index page */
@@ -326,7 +325,7 @@ header {
   width: 100%;
   padding: 25px 40px;
   background-color: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(144, 224, 239, 0.3);
+  border: 1px solid rgba(191, 87, 0, 0.3);
   color: #ffffff;
   border-radius: 12px;
   backdrop-filter: blur(5px);
@@ -365,13 +364,13 @@ header {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: rgba(144, 224, 239, 0.3);
+  background-color: rgba(191, 87, 0, 0.3);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .dot:hover {
-  background-color: rgba(144, 224, 239, 0.6);
+  background-color: rgba(191, 87, 0, 0.6);
   transform: scale(1.2);
 }
 
@@ -412,14 +411,14 @@ header {
   width: 100%;
   max-width: 350px;
   border-radius: 12px;
-  border: 3px solid rgba(144, 224, 239, 0.5);
+  border: 3px solid rgba(191, 87, 0, 0.5);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-photo:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(144, 224, 239, 0.3);
+  box-shadow: 0 12px 40px rgba(191, 87, 0, 0.3);
 }
 
 .about-name {
@@ -446,12 +445,12 @@ header {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 25px;
   border-radius: 12px;
-  border: 1px solid rgba(144, 224, 239, 0.3);
+  border: 1px solid rgba(191, 87, 0, 0.3);
   transition: border-color 0.3s ease;
 }
 
 .about-section-box:hover {
-  border-color: rgba(144, 224, 239, 0.6);
+  border-color: rgba(191, 87, 0, 0.6);
 }
 
 .about-section-box h2 {
@@ -516,7 +515,7 @@ header {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 40px;
   border-radius: 12px;
-  border: 1px solid rgba(144, 224, 239, 0.2);
+  border: 1px solid rgba(191, 87, 0, 0.2);
 }
 
 .about-title {
@@ -556,11 +555,11 @@ header {
 }
 
 .skill-item {
-  background-color: rgba(144, 224, 239, 0.15);
+  background-color: rgba(191, 87, 0, 0.15);
   padding: 12px 16px;
   border-radius: 6px;
   text-align: center;
-  border: 1px solid rgba(144, 224, 239, 0.3);
+  border: 1px solid rgba(191, 87, 0, 0.3);
 }
 
 
@@ -608,7 +607,7 @@ header {
 
 .project-card {
   background-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(144, 224, 239, 0.3);
+  border: 1px solid rgba(191, 87, 0, 0.3);
   border-radius: 12px;
   padding: 25px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -619,8 +618,8 @@ header {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(144, 224, 239, 0.2);
-  border-color: rgba(144, 224, 239, 0.6);
+  box-shadow: 0 8px 20px rgba(191, 87, 0, 0.2);
+  border-color: rgba(191, 87, 0, 0.6);
 }
 
 /* Projects */
@@ -635,7 +634,7 @@ header {
   height: 80px;
   object-fit: cover;
   border-radius: 8px;
-  border: 2px solid rgba(144, 224, 239, 0.4);
+  border: 2px solid rgba(191, 87, 0, 0.4);
   transition: all 0.3s ease;
   display: block;
 }
@@ -661,7 +660,7 @@ header {
   width: auto;
   height: auto;
   border-radius: 12px;
-  border: 3px solid rgba(144, 224, 239, 0.8);
+  border: 3px solid rgba(191, 87, 0, 0.8);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
   object-fit: contain;
 }
@@ -672,8 +671,8 @@ header {
 }
 
 .project-card:hover .project-thumbnail {
-  border-color: rgba(144, 224, 239, 0.8);
-  box-shadow: 0 4px 12px rgba(144, 224, 239, 0.3);
+  border-color: rgba(191, 87, 0, 0.8);
+  box-shadow: 0 4px 12px rgba(191, 87, 0, 0.3);
 }
 
 .project-header {
@@ -711,12 +710,12 @@ header {
 }
 
 .tech-tag {
-  background-color: rgba(144, 224, 239, 0.2);
+  background-color: rgba(191, 87, 0, 0.2);
   color: #bf5700;
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 0.85rem;
-  border: 1px solid rgba(144, 224, 239, 0.3);
+  border: 1px solid rgba(191, 87, 0, 0.3);
 }
 
 .project-links {
@@ -729,15 +728,15 @@ header {
   color: #ffffff;
   text-decoration: none;
   padding: 8px 16px;
-  background-color: rgba(144, 224, 239, 0.2);
+  background-color: rgba(191, 87, 0, 0.2);
   border-radius: 6px;
-  border: 1px solid rgba(144, 224, 239, 0.4);
+  border: 1px solid rgba(191, 87, 0, 0.4);
   transition: all 0.3s ease;
   font-size: 0.9rem;
 }
 
 .project-link:hover {
-  background-color: rgba(144, 224, 239, 0.4);
+  background-color: rgba(191, 87, 0, 0.4);
   transform: translateY(-2px);
 }
 
@@ -833,7 +832,7 @@ section {
 
 .org-card {
   background-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(144, 224, 239, 0.3);
+  border: 1px solid rgba(191, 87, 0, 0.3);
   border-radius: 12px;
   padding: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -843,20 +842,20 @@ section {
 
 .org-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(144, 224, 239, 0.2);
-  border-color: rgba(144, 224, 239, 0.6);
+  box-shadow: 0 8px 20px rgba(191, 87, 0, 0.2);
+  border-color: rgba(191, 87, 0, 0.6);
 }
 
 .org-logo-placeholder {
   width: 100%;
   height: 120px;
-  background-color: rgba(144, 224, 239, 0.1);
+  background-color: rgba(191, 87, 0, 0.1);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  border: 2px solid rgba(144, 224, 239, 0.3);
+  border: 2px solid rgba(191, 87, 0, 0.3);
 }
 
 .org-logo-text {
@@ -925,16 +924,16 @@ section {
   color: #bf5700;
   text-decoration: none;
   padding: 10px 20px;
-  background-color: rgba(144, 224, 239, 0.1);
+  background-color: rgba(191, 87, 0, 0.1);
   border-radius: 6px;
-  border: 1px solid rgba(144, 224, 239, 0.4);
+  border: 1px solid rgba(191, 87, 0, 0.4);
   transition: all 0.3s ease;
   text-align: center;
   font-weight: bold;
 }
 
 .org-link:hover {
-  background-color: rgba(144, 224, 239, 0.3);
+  background-color: rgba(191, 87, 0, 0.3);
   transform: translateY(-2px);
 }
 
@@ -949,102 +948,6 @@ section {
   
   .organizations-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-.hobbies-section {
-  padding: 80px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hobbies-section h2 {
-  font-size: 2.5rem;
-  color: #bf5700;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.1rem;
-  margin-bottom: 50px;
-}
-
-.hobbies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.hobby-card {
-  background: rgba(26, 26, 26, 0.8);
-  border: 2px solid rgba(144, 224, 239, 0.2);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hobby-card:hover {
-  transform: translateY(-8px);
-  border-color: #bf5700;
-  box-shadow: 0 10px 30px rgba(144, 224, 239, 0.3);
-}
-
-.hobby-image-container {
-  width: 100%;
-  height: 280px;
-  overflow: hidden;
-  background: #0a0a0a;
-}
-
-.hobby-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.hobby-card:hover .hobby-image-container img {
-  transform: scale(1.05);
-}
-
-.hobby-content {
-  padding: 25px;
-}
-
-.hobby-content h3 {
-  color: #bf5700;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-.hobby-content p {
-  color: #ffffff;
-  line-height: 1.7;
-  font-size: 0.95rem;
-}
-
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-  .hobbies-section {
-    padding: 60px 20px;
-  }
-
-  .hobbies-section h2 {
-    font-size: 2rem;
-  }
-
-  .hobbies-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .hobby-image-container {
-    height: 220px;
   }
 }
 
